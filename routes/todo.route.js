@@ -11,11 +11,11 @@ const router = express.Router();
 const { createTodo } = require("../controllers/createTodo.controller.js");
 const { getAllTodo} = require("../controllers/getAllTodo.controller.js")
 const { getTodoById } = require("../controllers/getTodoById.controller.js");
-const { updateTodoById } = require("../controllers/updateTodoById")
+const { updateTodoById } = require("../controllers/updateTodoById.controller.js")
 
 router.route("/todo").post(createTodo);
 router.route("/getAllTodo").get(getAllTodo);
 router.route("/getTodoById/:id").get(getTodoById);
-router.router("/updateTodoById/:id").get(updateTodoById);
+router.route("/updateTodoById/:id").get(updateTodoById);
 
 module.exports = router;
